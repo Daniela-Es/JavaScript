@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/slate/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Topicos de JavaScript</title>
+</head>
+
+<body>
+    <!-- navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#contenido">Tipos de datos
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#variables">Variables</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#consola">Consola del Navegador</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contactame</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- presentacion de la pagina -->
+    <header>
+        <div class="jumbotron">
+            <h1 class="display-3">JavaScript</h1>
+            <p class="lead">En esta pagina web repasaremos algunos conceptos basicos de JavaScript, entre los cuales se
+                incluyen: </p>
+            <p class="text-danger">Tipos de datos</p>
+            <p class="text-success">Variables</p>
+            <p class="text-info">Uso de la consola</p>
+            <hr class="my-4">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#contenido" role="button">Vamos!</a>
+            </p>
+            <a class="btn btn-primary btn-lg" href="#prueba" role="button">Prueba tus conocimientos sobre la Consola del
+                Navegador</a>
+        </div>
+    </header>
+
+    <!-- contenido de la pagina -->
+    <main>
+        <!-- informacion sobre tipos de datos -->
+        <div class="mx-4">
+            <h2 class="display-4 text-danger" id="contenido">Tipos de datos</h2>
+            <hr class="mx-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span class="badge badge-pill badge-warning">Primitivos</span>
+                        <button type="button" class="btn btn-warning btn-lg btn-block"
+                            onclick="boolean()">Boolean</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block" onclick="nulo()">Null</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block"
+                            onclick="number()">Number</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block"
+                            onclick="indefinido()">Undefined</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block"
+                            onclick="string()">String</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block"
+                            onclick="bigint()">BigInt</button>
+                        <button type="button" class="btn btn-warning btn-lg btn-block mb-4"
+                            onclick="symbol()">Symbol</button>
+
+                    </div>
+                    <div class="col">
+                        <span class="badge badge-pill badge-danger">Complejos</span>
+                        <button type="button" class="btn btn-danger btn-lg btn-block"
+                            onclick="funcion()">Funcion</button>
+                        <button type="button" class="btn btn-danger btn-lg btn-block" onclick="objeto()">Objeto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- informacion de variables -->
+        <div class="jumbotron" id="variables">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 borde">
+                        <h2 class="display-4 text-success">Variables</h2>
+                        <hr class="mx-5">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#def">Definicion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#caja">Caja</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#utilidad">Utilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#sintaxis">Sintaxis</a>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade show active" id="def">
+                                <p class="mt-3">Una variable puede definirse facilmente como <strong>un espacio de
+                                        memoria donde
+                                        se
+                                        almacena
+                                        un dato</strong> </p>
+                            </div>
+                            <div class="tab-pane fade" id="caja">
+                                <p class="mt-3">Puede pensarse en una variable como una caja <i class="fa fa-archive"
+                                        aria-hidden="true"></i>
+                                    donde podemos guardar un dato, con el nombre del mismo para poder utilizarlo despues
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="utilidad">
+                                <p class="mt-3">El uso de variables permite que nuestro programa sea mas general.
+                                    Podemos
+                                    declarar variables
+                                    para utilizarlas a lo largo del programa dandoles valores definidos que pueden
+                                    cambiar
+                                    dependiendo de nuestras necesidades </p>
+                            </div>
+                            <div class="tab-pane fade" id="sintaxis">
+                                <ol class="mt-3">
+                                    <li>Utilizamos la palabra reservada var.</li>
+                                    <li>Damos nombre a la variable </li>
+                                    <li>Signo de igual para definirla</li>
+                                    <li>Damos un valor inicial a la variable</li>
+                                </ol>
+                                <p>Ejemplo:</p>
+                                <p> var nombre = "Daniela"</p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 borde caja">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/16/13/42/box-2071537_960_720.png" alt="caja">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- prueba de conocimientos de la consola -->
+        <div class="mx-4" id="prueba">
+            <h2 class="display-4 text-info">Consola del navegador</h2>
+            <hr class="mx-5">
+            <p class="text-info">En esta seccion podras poner a prueba tus conocimientos en este tema, aun asi, mas
+                abajo encontraras toda la informacion necesaria para repasar lo que necesites.</p>
+            <button type="button" class="btn btn-outline-primary">
+                <a href="#repaso" role="button">Vamos al repaso</a>
+            </button>
+            <h3 class="mt-3">Elige la opcion correcta</h3>
+            <p>La consola del navegador, en Windows, se obtiene presionando:</p>
+            <p>Ctrl+Shift+</p>
+            <button type="button" class="btn btn-primary" onclick="verdadero()">I</button>
+            <button type="button" class="btn btn-primary" onclick="falso()">F</button>
+            <hr class="mx-5">
+            <p>La consola del navegador es una herramienta exclusiva para desarrolladores:</p>
+            <button type="button" class="btn btn-primary" onclick="falso()">Verdadero</button>
+            <button type="button" class="btn btn-primary" onclick="verdadero()">Falso</button>
+            <hr class="mx-5">
+            <p>La funcion de la consola es:</p>
+            <div class="contenedor">
+                <div>
+                    <p class="mb-5 mr-1">Poder ver y descargar el HTML de la pagina web que estoy mirando</p>
+                    <button type="button" class="btn btn-primary mr-2" onclick="falso()">Esta opcion es
+                        correcta</button>
+                </div>
+                <div>
+                    <p>Muestra mensajes de informacion, error o alerta que se reciben al hacer las peticiones para
+                        cargar desde la red los elementos incluidos en las páginas. </p>
+                    <button type="button" class="btn btn-primary mr-2" onclick="verdadero()">Esta opcion es
+                        correcta</button>
+                </div>
+            </div>
+        </div>
+        <!-- informacion sobre la consola y el objeto global -->
+        <div class="mx-4" id="consola">
+            <hr class="mx-5" id="repaso">
+            <h3 class="text-info">Repaso Consola del Navegador</h3>
+            <p>Es una herramienta para desarrolladores, usuarios avanzados o cualquier usuario que desee conocer mas al
+                fondo el funcionamiento de una pagina web. En ella se muestran mensajes de informacion, error o alerta
+                que se reciben al cargar la informacion para la pagina. </p>
+            <p>Se utiliza para depurar las paginas, ya que nos muestra variables mientras se ejecutan para ver si
+                estamos obteniendo el resultado esperado. Tambien nos permite inspeccionar los elementos de la pagina de
+                manera individual o revisar la responsividad de la misma. </p>
+            <p>Para obtenerla simplemente debes dar click derecho sobre cualquier parte de la pagina web y encontraras
+                la opcion "Inspect" o "Inspeccionar". Alli mismo encontraras la combinacion de teclas que abren tu
+                consola, la cual cambia dependiendo del navegador que uses y el sistema operativo con el que trabajas.
+            </p>
+            <div class="image">
+                <img src="../img/inspect.png" alt="inspeccionar">
+            </div>
+            <br>
+            <div class="image">
+                <img src="../img/console.png" alt="consola">
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <div>
+            <p>Creado por: DanniE</p>
+        </div>
+        <div>
+            <p class="lead"> itzela_sp@hotmail.com</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<!-- sweetalert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!-- js -->
+<script src="../js/app.js"></script>
+
+</html>

@@ -1,0 +1,36 @@
+html{
+    scroll-behavior: smooth;
+}
+
+/* seccion de variables */
+
+.caja img{
+    width: 80%;
+}
+
+.contenedor{
+    display: flex;
+}
+
+.contenedor div{
+    width: 50%;
+
+}
+.image{
+    border: 2px solid white ;
+}
+.image img{
+    width: 80vw;
+    
+}
+
+footer{
+    height: 40vh;
+    background-image: url(https://cdn.pixabay.com/photo/2015/05/26/23/52/technology-785742_960_720.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
